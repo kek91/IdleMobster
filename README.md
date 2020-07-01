@@ -11,29 +11,20 @@ The project uses MIT license so you are free to do whatever you please, but I wo
 
 ## Build instructions
 
+### Backend
+
+1. Setup Google Firebase with the following tables:
+   1. **users**: email, name, rank, prestige, data, ts
+   2. **forum**: ts, user, email, cat, msg
+
+### Frontend
+
 1. Clone repo
 2. Run `npm install` to install dependencies
-3. Run `npm run serve` to start a webserver then play the game at `localhost:8080` in your browser.
-4. Run `npm run build` to create a dist folder ready for upload to your webserver
+3. Rename `src/components/firebaseclient.default.js` to `src/components/firebaseclient.js` and insert your Firebase API keys etc
+4. Run `npm run serve` to start a webserver then play the game at `localhost:8080` in your browser.
+5. Run `npm run build` to create a dist folder ready for upload to your webserver
 
-Cloud saves and forum ("Chat cafe") won't work without configuring Google Firebase in `src/components/firebaseclient.js`.
-
-### Google Firebase tables:
-
-**users**:
-email, 
-name,
-rank,
-prestige,
-data,
-ts
-
-**forum**:
-ts,
-user,
-email,
-cat,
-msg
 
 
 ## Credits
